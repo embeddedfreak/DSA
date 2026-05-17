@@ -1,91 +1,48 @@
-/******************************************************************************
-Problem:
-Build a Binary Tree from preorder traversal array
-and perform level order traversal.
-
-Rules:
-- Each value represents a node.
-- -1 represents NULL.
-
-Example Input:
-1 2 -1 -1 3 4 -1 -1 5 -1 -1
-
-Constructed Tree:
-        1
-       / \
-      2   3
-         / \
-        4   5
-
-Level Order Traversal:
-Level by level from left to right.
-
-Expected Output:
-1 2 3 4 5
-
-Algorithm for Tree Construction:
-1. Maintain a global/static index.
-2. Increment index during recursive calls.
-3. If current value is -1:
-      return NULL.
-4. Create node with current value.
-5. Recursively build left subtree.
-6. Recursively build right subtree.
-7. Return root node.
-
-Algorithm for Level Order Traversal:
-1. Use queue data structure.
-2. Insert root node into queue.
-3. While queue is not empty:
-      a. Remove front element.
-      b. Print current node.
-      c. Insert left child if present.
-      d. Insert right child if present.
-
-Note:
-Current implementation stores node data in queue
-and recursively traverses nodes.
-
-Time Complexity:
-O(n)
-
-Space Complexity:
-O(n)
-*******************************************************************************/
-
 #include <iostream>
 #include <vector>
 #include <queue>
 
 using namespace std;
 
+// Node structure for Binary Tree
 class Node {
 public: 
     int data;
     Node* left;
     Node* right;
     
+    // Constructor to initialize node
     Node(int val) {
         data = val;
         left = right = NULL;
     }
 };
 
-queue<int> q;
 static int idx = -1;
 
-// Function to build binary tree recursively
+/*
+    Function to build Binary Tree using preorder traversal
+
+    Algorithm:
+    ----------
+    1. Increment index.
+    2. If current value is -1:
+        -> return NULL.
+    3. Create new node using current value.
+    4. Recursively build left subtree.
+    5. Recursively build right subtree.
+    6. Return root node.
+*/
 Node* buildTree(vector<int> preorder)
 {
-    // Move to next element
     idx++;
     
-    // If current value is -1, return NULL
+    // Base condition for NULL node
     if(preorder[idx] == -1) {
         return NULL;
     }
     
-    // Create new node
+    // Create node
     Node* root = new Node(preorder[idx]);
     
     // Build left subtree
@@ -94,46 +51,71 @@ Node* buildTree(vector<int> preorder)
     // Build right subtree
     root->right = buildTree(preorder);
     
-    // Return root node
     return root;
 }
 
-// Level Order Traversal:
-// Visit nodes level by level
+/*
+    Level Order Traversal (Breadth First Search)
+
+    Algorithm:
+    ----------
+    1. If tree is empty, return.
+    2. Create queue and push root node.
+    3. Repeat until queue becomes empty:
+        a. Get front node.
+        b. Remove node from queue.
+        c. Print node data.
+        d. Push left child if exists.
+        e. Push right child if exists.
+*/
 void levelorder_traverse(Node* root) 
 {
-    // Base condition
+    // Check for empty tree
     if(root == NULL) {
         return ;
     }
+
+    // Queue used for BFS traversal
+    queue<Node*> q;
+
+    // Push root node into queue
+    q.push(root);
     
-    // Insert current node data into queue
-    q.push(root->data);
-    
-    // Print queue elements
+    // Traverse until queue becomes empty
     while(q.size() > 0) {
-        int curr = q.front();
+
+        // Get front node
+        Node* curr = q.front();
+
+        // Remove front node
         q.pop();
+
+        // Print current node
+        cout<<curr->data<<" ";
         
-        cout<<curr<<" ";
+        // Push left child into queue
+        if(curr->left!=NULL)
+            q.push(curr->left);
+
+        // Push right child into queue
+        if(curr->right!=NULL)
+            q.push(curr->right);
+
     }
-    
-    // Traverse left subtree
-    levelorder_traverse(root->left);
-    
-    // Traverse right subtree
-    levelorder_traverse(root->right);
+
 }
 
 int main()
 {
-    // Preorder traversal array
-    vector<int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
+    // Preorder representation of binary tree
+    vector<int> preorder = {
+        1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1
+    };
     
-    // Build binary tree
+    // Build tree
     Node* root = buildTree(preorder);
     
-    // Print level order traversal
+    // Perform level order traversal
     levelorder_traverse(root);
     
     return 0;
