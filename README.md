@@ -34,21 +34,6 @@
 
 ---
 
-## Singly Linked List Operations (Important Concept Block)
-
-| Operation | Description |
-|-----------|-------------|
-| Insertion at Head | Add a new node at the beginning of the list |
-| Insertion at Tail | Add a new node at the end of the list |
-| Deletion by Value | Remove a node matching a given value |
-| Deletion by Position | Remove node at a specific index |
-| Traversal | Print all nodes from head to tail |
-| Search | Find whether an element exists |
-| Reverse List | Reverse the entire linked list |
-| Find Middle Node | Use slow and fast pointer approach |
-
----
-
 # Stack
 
 | No | Question | Solution |
@@ -89,6 +74,18 @@
 | No | Question | Solution |
 |----|----------|----------|
 | 1 | Write a C++ program to find the first non-repeating character in a string. | [Solution](Strings/first_unique_character.cpp) |
+| 2  | Write a C program to demonstrate different ways of taking string input using scanf(), fgets(), and scansets.   | [Solution](Strings/1_ways_to_input.c)      |
+| 3  | Write a C program to implement the strlen() function without using the standard library.                       | [Solution](Strings/2_strlen_implement.c)   |
+| 4  | Write a C program to implement the strcpy() function without using the standard library.                       | [Solution](Strings/3_strcpy.c)             |
+| 5  | Write a C program to implement the strcmp() function without using the standard library.                       | [Solution](Strings/4_strcmp.c)             |
+| 6  | Write a C program to check whether a string is a palindrome.                                                   | [Solution](Strings/palindrome_check.c)     |
+| 7  | Write a C program to reverse a string using the two-pointer technique.                                         | [Solution](Strings/reverse_string_tp.c)    |
+| 8  | Write a C program to count vowels, consonants, digits, and spaces in a string.                                 | [Solution](Strings/count_vowels.c)         |
+| 9  | Write a C program to count vowels, consonants, digits, and spaces using built-in character handling functions. | [Solution](Strings/count_vowels_builtin.c) |
+| 10 | Write a C program to count the number of words present in a string.                                           | [Solution](Strings/count_words.c)          |
+| 11 | Write a C program to convert uppercase characters of a string to lowercase.                                    | [Solution](Strings/upper_to_lower.c)       |
+| 12 | Write a C program to reverse each word of a sentence while preserving the word order.                          | [Solution](Strings/reverse_words.c)        |
+| 13 | Write a C program to reverse the order of words in a sentence.                                                 | [Solution](Strings/reverse_sentence.c)     |
 
 ---
 
@@ -123,7 +120,9 @@
 | 9 | Write a C++ program to find the second largest element in an array in a single pass. | [Solution](Practice/second_largest.cpp) |
 | 10 | Write a C++ program to rotate an array to the right by one position. | [Solution](Practice/right_rotate_array.cpp) |
 | 11 | Write a C++ program to rotate an array to the right by K positions. | [Solution](Practice/right_rotate_array_k.cpp) |
-| 12 | Write a C++ program to check if a number is a palindrome. | [Solution](Practice/palindrome.cpp) |
+| 12 | Write a C++ program to find the maximum subarray sum using an optimized brute force approach with two nested loops. | [Solution](Practice/sumarray_sum_bf_2.cpp)   |
+| 13 | Write a C++ program to find the maximum subarray sum using Kadane's Algorithm. | [Solution](Practice/sumarray_sum_kadane.cpp) |
+| 14 | Write a C++ program to find the maximum subarray sum using the brute force approach. | [Solution](Practice/sumarray_sum_bf_1.cpp)   |
 
 ---
 
@@ -144,6 +143,8 @@
 | 11 | Write a C++ program to compute power of a number. | [Solution](Practice/power.cpp) |
 | 12 | Write a C++ program to check if a number is an Armstrong number. | [Solution](Practice/amstrong.cpp) |
 | 13 | Write a C++ program to check repeated digit patterns in a number. | [Solution](Practice/repeat_digit.cpp) |
+| 14 | Write a C++ program to check if a number is a palindrome. | [Solution](Practice/palindrome.cpp) |
+
 
 ---
 
