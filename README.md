@@ -6,14 +6,15 @@
 |----------|------:|
 | Array | 3 |
 | LinkList | 15 |
-| Stack | 14 |
+| Stack | 15 |
 | Queue | 6 |
 | Strings | 13 |
 | Tree | 9 |
-| Practice | 34 |
-| Matrix | 0 |
-| Practice (Arrays & Searching) | 13 |
-| **Total** | **107** |
+| Practice | 14 |
+| Math | 14 |
+| Matrix | 2 |
+| Concurrency / OS Concepts | 4 |
+| **Total** | **95** |
 <!-- STATS_END -->
 
 # Array
