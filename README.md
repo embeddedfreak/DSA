@@ -1,6 +1,20 @@
 # DSA Practice Tracker
 
 ---
+<!-- STATS_START -->
+| Section | Count |
+|----------|------:|
+| Array | 3 |
+| LinkList | 15 |
+| Stack | 14 |
+| Queue | 6 |
+| Strings | 13 |
+| Tree | 9 |
+| Practice | 34 |
+| Matrix | 0 |
+| Practice (Arrays & Searching) | 13 |
+| **Total** | **107** |
+<!-- STATS_END -->
 
 # Array
 
