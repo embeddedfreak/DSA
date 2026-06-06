@@ -3,7 +3,10 @@ import re
 
 BASE_DIR = "."
 
-CATEGORY_MAP = {
+# -------------------------------
+# 1. Direct folder-based counts
+# -------------------------------
+FOLDER_MAP = {
     "Array": "Array",
     "LinkList": "LinkList",
     "Stack": "Stack",
@@ -11,71 +14,90 @@ CATEGORY_MAP = {
     "Strings": "Strings",
     "Tree": "Tree",
     "Practice": "Practice",
-    "Matrix": "Matrix"
+    "Matrix": "Practice",  # matrix files are inside Practice in your repo
+    "Concurrency / OS Concepts": "Practice",
+    "Math / Number Programs": "Practice",
+    "Maximum Subarray Sum": "Practice"
 }
 
-# Special grouping rules
-SPECIAL_GROUPS = {
-    "Practice (Arrays & Searching)": [
-        "Practice"
-    ],
-    "Math / Number Programs": [
-        "Practice"
-    ],
-    "Concurrency / OS Concepts": [
-        "Practice"
-    ],
-    "Maximum Subarray Sum": [
-        "Practice"
-    ]
-}
-
+# -------------------------------
+# 2. Count valid source files
+# -------------------------------
 def count_files(folder):
-    if not os.path.exists(folder):
+    path = os.path.join(BASE_DIR, folder)
+    if not os.path.exists(path):
         return 0
 
     count = 0
-    for root, _, files in os.walk(folder):
+    for root, _, files in os.walk(path):
         for f in files:
             if f.endswith(".c") or f.endswith(".cpp"):
                 count += 1
     return count
 
 
+# -------------------------------
+# 3. Compute category counts
+# -------------------------------
 def get_counts():
     counts = {}
 
-    for cat in CATEGORY_MAP:
-        counts[cat] = count_files(os.path.join(BASE_DIR, cat))
+    for category, folder in FOLDER_MAP.items():
+        counts[category] = count_files(folder)
 
-    # Override grouped categories manually (if needed)
-    counts["LinkList"] = count_files("LinkList")
-    counts["Tree"] = count_files("Tree")
-
-    # You can adjust these if you want smarter grouping
-    counts["Practice (Arrays & Searching)"] = len([
+    # Fix Matrix separately (only real matrix files)
+    counts["Matrix"] = len([
         f for f in os.listdir("Practice")
-        if f.endswith(".cpp") and "array" in f or "search" in f
+        if f.endswith(".cpp") and "matrix" in f or "array_sum" in f
+    ])
+
+    # Fix Math separately (exclude DS logic files)
+    counts["Math / Number Programs"] = len([
+        f for f in os.listdir("Practice")
+        if f.endswith(".cpp") and (
+            "fact" in f or "prime" in f or "power" in f or
+            "fibo" in f or "amstrong" in f or "perfect" in f
+        )
+    ])
+
+    # Fix concurrency
+    counts["Concurrency / OS Concepts"] = len([
+        f for f in os.listdir("Practice")
+        if f.endswith(".c") and (
+            "thread" in f or "mutex" in f or "semaphore" in f or "race" in f
+        )
+    ])
+
+    # Fix subarray section
+    counts["Maximum Subarray Sum"] = len([
+        f for f in os.listdir("Practice")
+        if "sumarray" in f
     ])
 
     return counts
 
 
+# -------------------------------
+# 4. Generate markdown table
+# -------------------------------
 def generate_table(counts):
     total = sum(counts.values())
 
-    table = []
-    table.append("| Section | Count |")
-    table.append("|----------|------:|")
+    lines = []
+    lines.append("| Section | Count |")
+    lines.append("|----------|------:|")
 
     for k, v in counts.items():
-        table.append(f"| {k} | {v} |")
+        lines.append(f"| {k} | {v} |")
 
-    table.append(f"| **Total** | **{total}** |")
+    lines.append(f"| **Total** | **{total}** |")
 
-    return "\n".join(table)
+    return "\n".join(lines)
 
 
+# -------------------------------
+# 5. Update README
+# -------------------------------
 def update_readme(table):
     with open("README.md", "r", encoding="utf-8") as f:
         content = f.read()
@@ -90,6 +112,9 @@ def update_readme(table):
         f.write(updated)
 
 
+# -------------------------------
+# Main
+# -------------------------------
 if __name__ == "__main__":
     counts = get_counts()
     table = generate_table(counts)
