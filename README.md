@@ -101,7 +101,9 @@
 | 11 | Write a C program to convert uppercase characters of a string to lowercase.                                    | [Solution](Strings/upper_to_lower.c)       |
 | 12 | Write a C program to reverse each word of a sentence while preserving the word order.                          | [Solution](Strings/reverse_words.c)        |
 | 13 | Write a C program to reverse the order of words in a sentence.                                                 | [Solution](Strings/reverse_sentence.c)     |
-
+| 14 | Write a C program to check whether two strings are anagrams using a frequency array.                           | [Solution](Strings/anagram_check.c) |
+| 15 | Write a C program to remove duplicate characters from a string using in-place method.                          | [Solution](Strings/remove_duplicate.c) |
+| 17 | Write a C program to find the frequency of characters in a string using a hash array (ASCII order).            | [Solution](Strings/character_frequency_hash_array.c) |
 ---
 
 # Tree
