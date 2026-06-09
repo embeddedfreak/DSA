@@ -97,13 +97,15 @@
 | 7  | Write a C program to reverse a string using the two-pointer technique.                                         | [Solution](Strings/reverse_string_tp.c)    |
 | 8  | Write a C program to count vowels, consonants, digits, and spaces in a string.                                 | [Solution](Strings/count_vowels.c)         |
 | 9  | Write a C program to count vowels, consonants, digits, and spaces using built-in character handling functions. | [Solution](Strings/count_vowels_builtin.c) |
-| 10 | Write a C program to count the number of words present in a string.                                           | [Solution](Strings/count_words.c)          |
+| 10 | Write a C program to count the number of words present in a string.                                            | [Solution](Strings/count_words.c)          |
 | 11 | Write a C program to convert uppercase characters of a string to lowercase.                                    | [Solution](Strings/upper_to_lower.c)       |
 | 12 | Write a C program to reverse each word of a sentence while preserving the word order.                          | [Solution](Strings/reverse_words.c)        |
 | 13 | Write a C program to reverse the order of words in a sentence.                                                 | [Solution](Strings/reverse_sentence.c)     |
 | 14 | Write a C program to check whether two strings are anagrams using a frequency array.                           | [Solution](Strings/anagram_check.c) |
 | 15 | Write a C program to remove duplicate characters from a string using in-place method.                          | [Solution](Strings/remove_duplicate.c) |
-| 17 | Write a C program to find the frequency of characters in a string using a hash array (ASCII order).            | [Solution](Strings/character_frequency_hash_array.c) |
+| 16 | Write a C program to find the frequency of characters in a string using a hash array (ASCII order).            | [Solution](Strings/character_frequency_hash_array.c) |
+| 17 | Write a C program to find the first non-repeating character in a string using a frequency array.               | [Solution](Strings/first_nonrepeat_Freq.c) |
+| 18 | Write a C program to perform substring search using naive pattern matching (sliding window technique).         | [Solution](Strings/substring_search.c) |
 ---
 
 # Tree
