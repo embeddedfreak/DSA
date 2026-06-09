@@ -8,13 +8,13 @@
 | LinkList | 15 |
 | Stack | 15 |
 | Queue | 6 |
-| Strings | 13 |
+| Strings | 19 |
 | Tree | 9 |
 | Practice | 14 |
 | Math | 14 |
 | Matrix | 2 |
 | Concurrency / OS Concepts | 4 |
-| **Total** | **95** |
+| **Total** | **101** |
 <!-- STATS_END -->
 
 # Array
@@ -106,6 +106,7 @@
 | 16 | Write a C program to find the frequency of characters in a string using a hash array (ASCII order).            | [Solution](Strings/character_frequency_hash_array.c) |
 | 17 | Write a C program to find the first non-repeating character in a string using a frequency array.               | [Solution](Strings/first_nonrepeat_Freq.c) |
 | 18 | Write a C program to perform substring search using naive pattern matching (sliding window technique).         | [Solution](Strings/substring_search.c) |
+| 19 | Write a C program to find the longest proper prefix of a string which is also a suffix using brute force approach. | [Solution](Strings/long_prefix_suffix.c) |
 ---
 
 # Tree

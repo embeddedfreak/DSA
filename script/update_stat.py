@@ -43,7 +43,7 @@ def update_stats(content, counts):
     table.append("|----------|------:|")
 
     for k, v in counts.items():
-        lines.append(f"| {k} | {v} |")
+        table.append(f"| {k} | {v} |")
 
     table.append(f"| **Total** | **{total}** |")
     table.append("<!-- STATS_END -->")
