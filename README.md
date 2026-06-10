@@ -4,7 +4,7 @@
 <!-- STATS_START -->
 | Section | Count |
 |----------|------:|
-| Array | 3 |
+| Array | 4 |
 | LinkList | 15 |
 | Stack | 15 |
 | Queue | 6 |
@@ -14,7 +14,7 @@
 | Math | 14 |
 | Matrix | 2 |
 | Concurrency / OS Concepts | 4 |
-| **Total** | **101** |
+| **Total** | **102** |
 <!-- STATS_END -->
 
 # Array
@@ -24,6 +24,7 @@
 | 1 | Write a C++ program to solve the Trapping Rain Water problem using prefix and suffix arrays. | [Solution](Array/Trapping_Rain_Water.cpp) |
 | 2 | Write a C++ program to solve the Trapping Rain Water problem using the two-pointer approach. | [Solution](Array/Trapping_Rain_Water_Two_Pointers.cpp) |
 | 3 | Write a C++ program to find the minimum cost to travel between gas stations in a circular route (Gas Station Circuit problem). | [Solution](Array/gas_station_circuit.cpp) |
+| 4 | Write a C program to find the sum of all contiguous subarrays of size 3 using the Sliding Window technique.    | [Solution](Array/Sumof_Three_ConsecutiveNumbers.c) |
 
 ---
 
@@ -107,6 +108,7 @@
 | 17 | Write a C program to find the first non-repeating character in a string using a frequency array.               | [Solution](Strings/first_nonrepeat_Freq.c) |
 | 18 | Write a C program to perform substring search using naive pattern matching (sliding window technique).         | [Solution](Strings/substring_search.c) |
 | 19 | Write a C program to find the longest proper prefix of a string which is also a suffix using brute force approach. | [Solution](Strings/long_prefix_suffix.c) |
+
 ---
 
 # Tree
