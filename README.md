@@ -179,6 +179,13 @@
 
 ---
 
+# Bitwise
+
+| No | Question | Solution |
+|----|----------|----------|
+
+---
+
 # Concurrency / OS Concepts
 
 | No | Question | Solution |
