@@ -4,7 +4,7 @@
 <!-- STATS_START -->
 | Section | Count |
 |----------|------:|
-| Array | 4 |
+| Array | 22 |
 | LinkList | 15 |
 | Stack | 15 |
 | Queue | 6 |
@@ -14,7 +14,7 @@
 | Math | 14 |
 | Matrix | 2 |
 | Concurrency / OS Concepts | 4 |
-| **Total** | **102** |
+| **Total** | **120** |
 <!-- STATS_END -->
 
 # Array
@@ -25,6 +25,24 @@
 | 2 | Write a C++ program to solve the Trapping Rain Water problem using the two-pointer approach. | [Solution](Array/Trapping_Rain_Water_Two_Pointers.cpp) |
 | 3 | Write a C++ program to find the minimum cost to travel between gas stations in a circular route (Gas Station Circuit problem). | [Solution](Array/gas_station_circuit.cpp) |
 | 4 | Write a C program to find the sum of all contiguous subarrays of size 3 using the Sliding Window technique.    | [Solution](Array/Sumof_Three_ConsecutiveNumbers.c) |
+| 5 | Write a C++ program to solve the Subarray Sum problem using the Brute Force approach. | [Solution](Array/subarray_sum_bf.cpp) |
+| 6 | Write a C++ program to solve the Subarray Sum problem using the Prefix Sum approach. | [Solution](Array/subarray_sum_ba.cpp) |
+| 7 | Write a C++ program to solve the Maximum Subarray Sum problem using Kadane’s Algorithm. | [Solution](Array/subarray_sum_kadane.cpp) |
+| 8 | Write a C++ program to demonstrate basic vector operations in STL. | [Solution](Array/vector_ops.cpp) |
+| 9 | Write a C++ program to solve the Pair Sum problem using brute force approach. | [Solution](Array/pair_sum_bf.cpp) |
+| 10 | Write a C++ program to solve the Pair Sum problem using two-pointer approach. | [Solution](Array/pair_sum_tp.cpp) |
+| 11 | Write a C++ program to find the single non-repeating element using XOR operation. | [Solution](Array/single_number.cpp) |
+| 12 | Write a C++ program to find the Majority Element using brute force approach. | [Solution](Array/majority_element_bf.cpp) |
+| 13 | Write a C++ program to find the Majority Element using sorting approach. | [Solution](Array/majority_element_ba.cpp) |
+| 14 | Write a C++ program to find the Majority Element using Moore’s Voting Algorithm. | [Solution](Array/majority_element_moore.cpp) |
+| 15 | Write a C++ program to calculate power using fast exponentiation (binary exponentiation). | [Solution](Array/power_func.cpp) |
+| 16 | Write a C++ program to solve the Best Time to Buy and Sell Stock problem. | [Solution](Array/buy_sell_stocks.cpp) |
+| 17 | Write a C++ program to solve the Container With Most Water problem using two pointers. | [Solution](Array/container_most_water.cpp) |
+| 18 | Write a C++ program to implement iterative Binary Search. | [Solution](Array/binary_search.cpp) |
+| 19 | Write a C++ program to implement recursive Binary Search. | [Solution](Array/binary_search_rec.cpp) |
+| 20 | Write a C++ program to solve Product of Array Except Self using brute force. | [Solution](Array/product_array_bf.cpp) |
+| 21 | Write a C++ program to solve Product of Array Except Self using prefix-suffix arrays. | [Solution](Array/product_array_ba.cpp) |
+| 22 | Write a C++ program to solve Product of Array Except Self using optimized O(1) space approach. | [Solution](Array/product_array_oa.cpp) |
 
 ---
 
