@@ -6,6 +6,10 @@ using namespace std;
 
 void rotate_array(vector<int> &nums, int k) 
 {
+	/* If k = 10 and n = 7
+	* That means the k > n edge case
+	* Bring it to limit within n
+	*/
 	int n = nums.size();
 	k = k % n;
 	reverse(nums.begin(), nums.end());
